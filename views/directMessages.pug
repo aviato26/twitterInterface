@@ -1,0 +1,14 @@
+
+li
+  h3 Conversation with
+    a  #{userProfile.name}
+  ul(class='app--message--conversation')
+    for dm in dms
+      if dm.id
+        li(class='app--message--me')
+          p(class='app--message--text') #{dm.text}
+          p(class='app--message--timestamp') #{dm.time} hours ago
+      else
+        li(class='app--message')
+          p(class='app--message--text') #{dm.text}
+          p(class='app--message--timestamp') #{dm.time} hours ago

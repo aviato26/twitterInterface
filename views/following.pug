@@ -1,0 +1,11 @@
+for friend in friends
+  li
+    .circle--fluid
+      div(class='circle--fluid--cell circle--fluid--primary')
+        a(class='app--tweet--author')
+          .app--avatar(style=`background-image: url(${friend.img})`)
+            img(src=friend.img)
+          h4=friend.name
+          p=`@${friend.screenName}`
+      .circle--fluid--cell
+        a(class='button button-text') #{friend.following}
