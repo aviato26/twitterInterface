@@ -15,7 +15,8 @@ let tweets = (data) => {
       tweet: data[i].text,
       time: Math.floor(Math.abs( new Date() - new Date(hour)) / 36e5),
       reTweet: data[i].retweet_count,
-      fav: data[i].favorite_count
+      fav: data[i].favorite_count,
+      friends: data[i].user.friends_count
     })
   }
 

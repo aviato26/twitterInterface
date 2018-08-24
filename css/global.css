@@ -2445,7 +2445,6 @@ a:hover .app--avatar {
 }
 /* line 237, ../sass/global.sass */
 .app--message--text:after {
-  content: "";
   display: block;
   position: absolute;
   left: -8px;

@@ -1,5 +1,5 @@
 
-let dmInfo = (dm) => {
+let dmInfo = (dm, id) => {
   let dms = [];
   let stamp;
 
@@ -11,7 +11,7 @@ let dmInfo = (dm) => {
         {
           time: Math.floor(Math.abs( new Date() - new Date(parseInt(stamp))) / 36e5),
           text: dm.events[i].message_create.message_data.text,
-          id: (dm.events[i].message_create.sender_id === '1025834677792194560') ? true : false
+          id: (dm.events[i].message_create.sender_id === id[0].user.id_str) ? true : false
         }
       )
     }
