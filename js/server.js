@@ -46,5 +46,5 @@ app.set('view engine', 'pug');
   })
 
 app.listen(3000, () => {
-  console.log('server up and running')
+  console.log('server up and running on port 3000')
 })
